@@ -1,2 +1,2 @@
 # Hotel-Management-System
-A website contains functions of hotel mangement system with solutions
+This is a comprehensive Hotel Management System developed using Java and Spring Boot. The project is designed to streamline hotel operations, including room booking, room availability management, and other essential services. It provides a user-friendly web interface for both hotel staff and customers to manage reservations, check room availability, and access various hotel services efficiently.
