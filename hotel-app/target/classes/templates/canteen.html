@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Canteen Menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 min-h-screen font-sans">
+    <div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg mt-8">
+        <h2 class="text-2xl font-bold mb-4 text-center text-green-600">Canteen Menu</h2>
+        <ul class="list-disc pl-5">
+            <li th:each="item : ${menu}" class="p-2 border-b">
+                <span th:text="${item.name}" class="font-semibold"></span> - ₹<span th:text="${item.price}"></span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

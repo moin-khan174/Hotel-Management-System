@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Book a Room</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 min-h-screen font-sans">
+    <!-- Header with Logo -->
+    <header class="text-center p-4">
+        <img src="/images/homtel.jpg" alt="Hotel Logo" class="mx-auto mb-4">
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="flex gap-6 mb-6 bg-gray-800 p-4 rounded-lg shadow-md justify-center">
+        <a href="/booking" class="text-white hover:text-yellow-400">Booking</a>
+        <a href="/rooms" class="text-white hover:text-yellow-400">Rooms</a>
+        <a href="/canteen" class="text-white hover:text-yellow-400">Canteen</a>
+        <a href="/help" class="text-white hover:text-yellow-400">Help</a>
+    </nav>
+
+    <!-- Booking Form -->
+    <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg mt-8">
+        <h2 class="text-2xl font-bold mb-4 text-center text-indigo-600">Book a Room</h2>
+        <form th:action="@{/booking}" method="post">
+            <!-- Name Input -->
+            <input type="text" placeholder="Your Name" name="name" class="w-full border p-2 mb-4 rounded-lg shadow-sm" required>
+
+            <!-- Email Input -->
+            <input type="email" placeholder="Your Email" name="email" class="w-full border p-2 mb-4 rounded-lg shadow-sm" required>
+
+            <!-- Phone Number Input -->
+            <input type="tel" placeholder="Your Phone Number" name="phone" class="w-full border p-2 mb-4 rounded-lg shadow-sm" required>
+
+            <!-- Room Type Dropdown -->
+            <select name="roomType" class="w-full border p-2 mb-4 rounded-lg shadow-sm" required>
+                <option value="">Select Room Type</option>
+                <option value="Single">Single Room</option>
+                <option value="Double">Double Room</option>
+                <option value="Suite">Suite</option>
+            </select>
+
+            <!-- Submit Button -->
+            <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600">Book Now</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Help & FAQs</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 min-h-screen font-sans">
+    <div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg mt-8">
+        <h2 class="text-2xl font-bold mb-4 text-center text-yellow-600">Help & FAQs</h2>
+        <div class="mb-4">
+            <h3 class="text-xl font-semibold">FAQs:</h3>
+            <ul class="list-disc pl-5">
+                <li th:each="faq : ${faqs}" th:text="${faq}"></li>
+            </ul>
+        </div>
+        <div>
+            <h3 class="text-xl font-semibold">Customer Helpline:</h3>
+            <p class="font-medium">For assistance, please call: <span class="text-blue-500">1800-800</span></p>
+        </div>
+    </div>
+</body>
+</html>
